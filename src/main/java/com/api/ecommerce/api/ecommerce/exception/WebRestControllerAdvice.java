@@ -19,8 +19,8 @@ public class WebRestControllerAdvice {
     @ExceptionHandler(CustomNotFoundException.class)
     @ResponseBody
     public ResponseEntity<Object>  handleNotFoundException(CustomNotFoundException ex) {
-        String weatherInformationNotFound = "Weather Information not found";
-        ResponseMsg responseMsg = new ResponseMsg(new Date(), ex.getLocalizedMessage(), weatherInformationNotFound);
+        String priceInformationNotFound = "Price Information not found";
+        ResponseMsg responseMsg = new ResponseMsg(new Date(), ex.getLocalizedMessage(), priceInformationNotFound);
 
         return new ResponseEntity<>(responseMsg, HttpStatus.NOT_FOUND);
     }
