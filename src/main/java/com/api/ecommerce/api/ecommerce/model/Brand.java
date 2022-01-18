@@ -9,13 +9,9 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+
 @Entity(name = "brand")
-@NoArgsConstructor
-@AllArgsConstructor
 @Data
-@Builder
-@JsonIgnoreProperties(ignoreUnknown = true)
-@JsonInclude(JsonInclude.Include.NON_ABSENT)
 public class Brand {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

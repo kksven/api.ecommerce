@@ -1,24 +1,19 @@
 package com.api.ecommerce.api.ecommerce.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
 @Data
-@Builder
 public class Prices {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name= "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name= "PRICE_LIST")
+    private int priceList;
+
+    @Column(name= "product_id")
     private int productId;
 
     @OneToOne(cascade = CascadeType.ALL)
@@ -30,9 +25,6 @@ public class Prices {
 
     @Column(name= "END_DATE")
     private LocalDateTime endDate;
-
-    @Column(name= "PRICE_LIST")
-    private int priceList;
 
     @Column(name= "PRIORITY")
     private int priority;

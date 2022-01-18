@@ -2,14 +2,18 @@ package com.api.ecommerce.api.ecommerce.domain;
 
 
 import lombok.Builder;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Builder
+@Data
 public class Product implements Serializable {
     private int productId;
     private int brandID;
-    private int priceListCurr;
-    private LocalDate startDatePrice;
+    private int priceList;
+    private LocalDateTime startDatePrice;
     private double price;
+    private String curr;
 }
