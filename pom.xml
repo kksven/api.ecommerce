@@ -47,10 +47,17 @@
 			<version>3.11</version>
 		</dependency>
 		<!-- flyway database migration dependency -->
-		<!-- <dependency>
+		 <dependency>
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-core</artifactId>
-		</dependency>-->
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.flywaydb.flyway-test-extensions/flyway-spring-test -->
+		<dependency>
+			<groupId>org.flywaydb.flyway-test-extensions</groupId>
+			<artifactId>flyway-spring-test</artifactId>
+			<version>7.0.0</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
